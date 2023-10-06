@@ -1,0 +1,13 @@
+<h1> <%= @review.title %> </h1>
+
+<div class="score"> 
+    <%= @review.score %> / 10
+</div>
+<div class="body"> 
+    <%= simple_format @review.body %>
+</div>
+
+<div class="action">
+    <%= link_to "Edit this review", edit_review_path(@review) %>
+    <%= button_to "Delete this review", review_path(@review), method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}} %>
+</div>
