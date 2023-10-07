@@ -12,25 +12,22 @@
 
   <body>
     <header>
-    
+    <nav>
       <h1><%=link_to root_path do %>
-
-      <%= image_tag "bien-logo.svg"%>
+        <%= image_tag "bien-logo.svg"%>
       
-      <% end %>
+        <% end %>
       </h1>
-      
-      <h2>The best restaurant Reviews in the world</h2>
-
+      </nav>
       <nav>
       <%=link_to "Add a review", new_review_path %>
       </nav>
     
     </header>
     
-
+    <main>
     <%= yield %>
-
+  </main>
     <footer>
 
       Copyright 2023 Bien Reviews

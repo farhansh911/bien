@@ -1,5 +1,13 @@
 <%= form_for @review do |f| %>
 
+<% if @review.errors.any? %>
+ 
+    <% @review.errors.full_messages.each do |message|%>
+        <p><%= message %> </p>
+    <%end%>
+ 
+<% end %>
+
 <p>
     <%= f.label :title %>
     <%= f.text_field :title %>
